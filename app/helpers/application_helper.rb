@@ -5,7 +5,7 @@ module ApplicationHelper
 	@message = ""
 
 	#we want to provide the user with the Route and Vehicle numbers for the approaching bus(es). The best way to save two related items is a hash!
-	@buses - {}
+	@buses = {}
 
 	results.each do |result|
 		if result ["TIMEPOINT"].include?station

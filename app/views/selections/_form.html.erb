@@ -15,12 +15,12 @@
 
   <div class="field">
 <!-- Below is the tag for a drop-down menu -->
-    <%= f.label :station_name %><br>
-    <%= f.select :station_name. Station.all.collect{|station|[station.name]} %>
+  
+    <%= f.select :station_name, Station.all.collect{|station|[station.name]} %>
     <!-- We will collect a list of all the Stations, passing their names, and assign whichever is chosen to the Selection's parameter 'station_name' -->
 
   </div>
   <div class="actions">
-    <%= f.submit 'Check for buses!', =>'btn submit-button' %>
+    <%= f.submit 'Check for buses!', :class =>'btn submit-button' %>
   </div>
 <% end %>
