@@ -14,3 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(window).on('scroll', function () {
+var scrollPos = $(document).scrollTop();
+$('.scroll').css({
+top: scrollPos
+});
+}).scroll();
