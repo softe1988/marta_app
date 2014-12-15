@@ -1,6 +1,6 @@
 module ApplicationHelper
 #this is where the User's selection - 'station' will be compared with the API data - 'results'.
-	def hash_and_mesg_generator(results, station)
+	def hash_and_msg_generator(results, station)
 	#we will have a couple messages to tell the user whether or not a bus is coming soon.
 	@message = ""
 

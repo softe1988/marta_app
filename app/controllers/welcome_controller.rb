@@ -35,8 +35,14 @@ class WelcomeController < ApplicationController
   #page where the coming buses will be displayed, after the dropdown menu choice
 
   def yourbuses_dropdown
-  #we'll get to this later, first focus on the radio button actions
-  end
+  	#page where the coming buses will be displayed, after the dropdown menu choice
+	  	yourstation = Selection.last
+	  	@selection = yourstation.station_name
+	  	@results = JSON.parse(open("http://developer.itsmarta.com/BRDRestService/BRDRestService.svc/GetAllBus").read)
+	  	hash_and_msg_generator(@results, @selection)
+
+#find this method in the Application Helper!
+  end	
 
 end
 

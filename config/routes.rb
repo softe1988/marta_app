@@ -1,4 +1,4 @@
-MartaApp::.Application.routes.draw do
+MartaApp::Application.routes.draw do
   
   resources :selections 
 

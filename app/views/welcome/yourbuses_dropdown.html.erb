@@ -1,2 +1,21 @@
-<h1>Welcome#yourbuses_dropdown</h1>
-<p>Find me in app/views/welcome/yourbuses_dropdown.html.erb</p>
+<!--This is the sister-page of yourbuses.html.erb
+That one handles the results from the radio button choice, this one handles the results from the dropdown menu choice.-->
+
+<h3>
+You are at: <%=selection %> Station.
+</h3>
+
+<div>
+<%= @message %>
+</div>
+
+<br>
+<%buses.each do |route, vehicle| %>
+
+<div>
+Route:<%= route%> <br>
+Vehicle:<%=vehicle %> <br>
+</div>	
+
+<br>
+<%end%>
