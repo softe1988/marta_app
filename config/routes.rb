@@ -1,11 +1,18 @@
-Rails.application.routes.draw do
-  get 'welcome/radioselect'
+MartaApp::.Application.routes.draw do
+  
+  resources :selections 
 
-  get 'welcome/yourbuses'
+  get "welcome/home"
 
-  get 'welcome/yourbuses_dropdown'
+  get 'welcome/radioselect' => "welcome#radioselect"
 
-  resources :selections
+  get 'welcome/yourbuses' => "welcome#yourbuses"
+
+  get 'welcome/busesarriving' => 'welcome#yourbuses_dropdown', as: :busesarriving
+  #gave it a different URL name from its action name, because I don't like underscores in URL addresses. Call me fickle.
+
+  root 'welcome#home'
+  
 
   resources :stations
 
