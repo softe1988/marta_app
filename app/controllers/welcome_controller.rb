@@ -12,7 +12,9 @@ class WelcomeController < ApplicationController
   #welcome/home
   #just a home/landing-page
   def home
+    @result = JSON.parse(open())
   end
+  # def for JSON api
   
   def radioselect
   #For your ease, an array of all of the rail stations in the MARTA system.

@@ -2,8 +2,24 @@
 -->
 
 <h3>
-You are at: <%=@station %> Station.
+You are at: <%=@station %> Station
 </h3>
+
+<h4>
+There are <%= @results.count %> bus routes currently.</h4>
+<% @results.each do |r| %>
+
+#timepoint exercise
+<% if r['TIMEPOINT'].include? "Inman Park" %>
+
+<%= r['ROUTE'] + " will be stopping at Inman Park Station." %> <br />
+
+<hr>
+
+<% end %>
+
+<% end %>
+
 
 <div>
 <%= @message %>
@@ -13,14 +29,12 @@ You are at: <%=@station %> Station.
 <br>
 
 <% @buses.each do |route, vehicle| %>
-
 <!-- We loop through the hash, printing out keys and values. If nothing is in the hash, nothing will print out. No harm, no foul. -->
 
 <div>
-Route: <%= route %><br>
-Vehicle: <%=vehicle %><br>
+	Route: <%= route %><br>
+	Vehicle: <%=vehicle %><br>
 </div>
-
 <br>
 
 <%end%>
