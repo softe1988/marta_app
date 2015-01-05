@@ -11,7 +11,7 @@ MartaApp::Application.routes.draw do
   get 'welcome/busesarriving' => 'welcome#yourbuses_dropdown', as: :busesarriving
   #gave it a different URL name from its action name, because I don't like underscores in URL addresses. Call me fickle.
 
-  root 'welcome#home'
+  root to: 'welcome#radioselect'
   
 
   resources :stations
