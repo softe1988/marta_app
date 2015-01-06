@@ -22,7 +22,5 @@ database: db/test.sqlite3
 production:
 adapter: postgresql
 encoding: unicode
-database: db/production.postgresql
+databae: db/development.sqlite3
 pool: 5
-username: myapp
-password: simone
